@@ -1,0 +1,235 @@
+:root {
+    --primary-color: #FF6B35;
+    --secondary-color: #004E89;
+    --dark-bg: #0f1419;
+    --light-bg: #f8f9fa;
+    --text-primary: #1a1a1a;
+    --text-light: #ffffff;
+    --accent: #1dd1a1;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    text-decoration: none;
+    list-style: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background: var(--dark-bg);
+    color: var(--text-primary);
+}
+.contact {
+    padding: 12px 28px;
+    background: linear-gradient(135deg, var(--primary-color), #ff8c5a);
+    color: var(--text-light);
+    border: 2px solid transparent;
+    border-radius: 50px;
+    font-size: 15px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.contact:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 107, 53, 0.5);
+}
+/* ===== Header Sticky ===== */
+.header.sticky {
+    background: linear-gradient(135deg, rgba(15, 20, 25, 0.99) 0%, rgba(0, 78, 137, 0.4) 100%);
+    box-shadow: 0 10px 30px rgba(255, 107, 53, 0.1);
+}
+
+/* ===== Fade In Animation ===== */
+.fade-out {
+    opacity: 0;
+    transform: translateY(30px);
+}
+
+.fade-in {
+    animation: fadeInUp 0.8s ease forwards;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== Placeholder Color ===== */
+::placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+:-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+::-ms-input-placeholder {
+    color: rgba(255, 255, 255, 0.5);
+}
+
+/* ===== Form Input Error ===== */
+.labelInput.error,
+textarea.error {
+    border: 2px solid #FF6B6B !important;
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1) 0%, rgba(255, 107, 107, 0.05) 100%) !important;
+    animation: shake 0.5s ease;
+}
+
+@keyframes shake {
+    0%, 100% { transform: translateX(0); }
+    25% { transform: translateX(-10px); }
+    75% { transform: translateX(10px); }
+}
+
+.labelInput.error::placeholder,
+textarea.error::placeholder {
+    color: #FF6B6B;
+}
+
+/* ===== Responsive Design ===== */
+@media (max-width: 1024px) {
+    .home,
+    .sobre {
+        flex-direction: column;
+        padding: 100px 10%;
+        gap: 40px;
+    }
+
+    .img-box img,
+    .sobre-img img {
+        width: 300px;
+    }
+}
+
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: flex;
+    }
+
+    .navbar {
+        position: fixed;
+        top: 80px;
+        right: -100%;
+        width: 100%;
+        background: linear-gradient(135deg, rgba(15, 20, 25, 0.98) 0%, rgba(0, 78, 137, 0.3) 100%);
+        flex-direction: column;
+        align-items: center;
+        padding: 40px 0;
+        transition: right 0.3s ease;
+        backdrop-filter: blur(20px);
+        border-bottom: 1px solid rgba(255, 107, 53, 0.1);
+    }
+
+    .navbar.active {
+        right: 0;
+    }
+
+    .navbar a {
+        display: block;
+        margin: 15px 0;
+        font-size: 18px;
+    }
+
+    .contact {
+        display: none;
+    }
+
+    .secao h2 {
+        font-size: 42px;
+    }
+
+    .educacao {
+        grid-template-columns: 1fr;
+    }
+
+    .card {
+        padding: 30px;
+    }
+
+    .home-content h1 {
+        font-size: 48px;
+    }
+
+    .sobre-content h2 {
+        font-size: 36px;
+    }
+
+    .sobre-content h3 {
+        font-size: 42px;
+    }
+
+    .contact-form form .input-box {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form h2 {
+        font-size: 42px;
+    }
+
+    .home-content p,
+    .sobre-content p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .header {
+        padding: 15px 5%;
+    }
+
+    .home {
+        padding: 100px 5% 30px;
+    }
+
+    .home-content h3 {
+        font-size: 32px;
+    }
+
+    .home-content h1 {
+        font-size: 36px;
+    }
+
+    .btn-box {
+        flex-direction: column;
+        gap: 15px;
+    }
+
+    .btn-1,
+    .btn-2 {
+        width: 100%;
+    }
+
+    .footer .social a {
+        width: 45px;
+        height: 45px;
+        line-height: 41px;
+        margin: 0 8px;
+    }
+
+    .footer ul li {
+        padding: 0 10px;
+        font-size: 14px;
+    }
+
+    .card {
+        padding: 20px;
+    }
+
+    .card h3 {
+        font-size: 22px;
+    }
+}
