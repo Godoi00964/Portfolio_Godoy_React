@@ -6,7 +6,7 @@ export default function Educacao() {
   return (
     <div>
          <section className="secao" id="educaçao">
-      <h2>Diciplinas em Estudo.</h2>
+      <h2>Disciplinas em Estudo.</h2>
       <div className="educacao">
         <div className="card">
           <img src="img/html.png" />

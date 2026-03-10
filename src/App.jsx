@@ -7,6 +7,8 @@ import Sobre from "./components/Sobre";
 import Educacao from "./components/Educacao";
 import Contato from "./components/Contato";
 import Footer from "./components/Footer";
+// import Button from "./components/Button";
+
 
 function App() {
   return (
@@ -17,6 +19,7 @@ function App() {
       <Educacao />
       <Contato />
       <Footer />
+      
     </>
   );
 }

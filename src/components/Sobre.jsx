@@ -36,7 +36,7 @@ export default function Sobre() {
           focar no que realmente importa: a experiência do usuário, a
           performance e a resolução de problemas complexos.
         </p>
-        <a href="#" className="btn-2">Experiencia</a>
+        <a href="#" className="btn-2">Experiência</a>
       </div>
     </section>
     </div>

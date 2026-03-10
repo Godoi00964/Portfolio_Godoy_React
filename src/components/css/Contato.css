@@ -99,3 +99,47 @@
     transform: translateY(-3px);
     box-shadow: 0 15px 40px rgba(255, 107, 53, 0.5);
 }
+/* Para telas menores que 600px */
+@media (max-width: 600px) {
+    .contact-form {
+        padding: 50px 5%; /* Diminui um pouco o padding para ganhar espaço */
+    }
+
+    .contact-form form .input-box {
+        grid-template-columns: 1fr; /* Força apenas 1 coluna no celular */
+    }
+
+    .contact-form h2 {
+        font-size: 32px; /* Ajusta o título para não estourar a tela */
+    }
+
+
+    .contact-form h2 {
+        font-size: 28px; /* Reduzindo o título para caber melhor */
+        margin-bottom: 25px;
+    }
+
+    /* Ajuste para inputs e textarea */
+    .contact-form form .input-box input,
+    .contact-form form textarea {
+        font-size: 15px; 
+    }
+
+    /* Ajuste do botão de envio */
+    .contact-form form input[type="submit"] {
+        font-size: 16px;
+        padding: 14px 0;
+    }
+}
+@media (max-width: 600px) {
+    /* ... seus ajustes anteriores ... */
+
+    /* Aumentando o texto dos parágrafos ou elementos de texto */
+    p, 
+    .contact-form p,
+    .card p /* Ajuste conforme a classe que você usa para seus textos */
+    .contact-form label { 
+        font-size: 16px; 
+        line-height: 1.6; /* Aumentar o espaçamento entre linhas ajuda muito na leitura */
+    }
+}
