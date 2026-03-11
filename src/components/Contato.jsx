@@ -1,5 +1,6 @@
 import React from 'react'
 import './css/Contato.css';
+import Button from './Button';
 
 export default function Contato() {
   return (
@@ -10,10 +11,10 @@ export default function Contato() {
         <div className="input-box">
           <input type="text" className="labelInput" placeholder="Nome" />
 
-          <input type="email" class="labelInput" placeholder="Email" />
+          <input type="email" className="labelInput" placeholder="Email" />
         </div>
 
-        <div class="input-box">
+        <div className="input-box">
           <input type="number" className="labelInput" placeholder="Telefone" />
           <input type="text" className="labelInput" placeholder="Assunto" />
         </div>
@@ -25,7 +26,7 @@ export default function Contato() {
           placeholder="Sua Messagem"
         ></textarea>
 
-        <input type="submit" value="Enviar Mensagem" className="btn-1" />
+        <Button isSubmit type="btn-1" value="Enviar Mensagem" />
       </form>
     </section>
 

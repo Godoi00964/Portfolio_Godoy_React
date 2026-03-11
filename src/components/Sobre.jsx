@@ -1,5 +1,6 @@
 import React from 'react'
 import './css/Sobre.css';
+import Button from './Button';
 
 
 export default function Sobre() {
@@ -9,7 +10,7 @@ export default function Sobre() {
       <div className="sobre-img">
         <img src="img/busto2.png" alt="" />
       </div>
-      <div class="sobre-content">
+      <div className="sobre-content">
         <h2>Sobre <span>Me</span></h2>
         <h3>Um <span>Developer</span></h3>
         <p>
@@ -36,7 +37,7 @@ export default function Sobre() {
           focar no que realmente importa: a experiência do usuário, a
           performance e a resolução de problemas complexos.
         </p>
-        <a href="#" className="btn-2">Experiencia</a>
+        <Button href="#" type="btn-2">Experiencia</Button>
       </div>
     </section>
     </div>

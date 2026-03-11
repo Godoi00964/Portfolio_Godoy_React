@@ -5,8 +5,8 @@ import './css/Educacao.css';
 export default function Educacao() {
   return (
     <div>
-         <section className="secao" id="educaçao">
-      <h2>Diciplinas em Estudo.</h2>
+         <section className="secao" id="educacao">
+      <h2>Disciplinas em Estudo.</h2>
       <div className="educacao">
         <div className="card">
           <img src="img/html.png" />

@@ -1,11 +1,12 @@
 import React from 'react'
 import './css/Home.css';
+import Button from './Button';
 
 export default function Home() {
   return (
     <div>
-        <section class="home" id="inicio">
-      <div class="home-content">
+        <section className="home" id="inicio">
+      <div className="home-content">
         <h3>Oi</h3>
         <h1>
           Eu sou <span>Eduardo Godoy<br /></span>Desenvolvedor Front-End.
@@ -18,12 +19,12 @@ export default function Home() {
           experiência ao usuário (UX).
         </p>
         <br />
-        <div class="btn-box">
-          <button class="btn-1">Contato</button>
-          <button class="btn-2">Saiba mais</button>
+        <div className="btn-box">
+          <Button href="#contato" type="btn-1">Contato</Button>
+          <Button href="#sobre" type="btn-2">Saiba mais</Button>
         </div>
       </div>
-      <div class="img-box">
+      <div className="img-box">
         <img src="img/busto3.jpg" alt="" />
       </div>
     </section>

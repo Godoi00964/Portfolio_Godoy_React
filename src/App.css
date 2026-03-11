@@ -25,47 +25,22 @@ body {
     background: var(--dark-bg);
     color: var(--text-primary);
 }
-.contact {
-    padding: 12px 28px;
-    background: linear-gradient(135deg, var(--primary-color), #ff8c5a);
-    color: var(--text-light);
-    border: 2px solid transparent;
-    border-radius: 50px;
-    font-size: 15px;
-    font-weight: 600;
-    transition: all 0.3s ease;
-    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
-}
-
-.contact:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(255, 107, 53, 0.5);
-}
 /* ===== Header Sticky ===== */
 .header.sticky {
     background: linear-gradient(135deg, rgba(15, 20, 25, 0.99) 0%, rgba(0, 78, 137, 0.4) 100%);
     box-shadow: 0 10px 30px rgba(255, 107, 53, 0.1);
 }
 
-/* ===== Fade In Animation ===== */
-.fade-out {
+/* ===== Scroll Reveal Animation ===== */
+.reveal {
     opacity: 0;
     transform: translateY(30px);
+    transition: all 0.8s ease-out;
 }
 
-.fade-in {
-    animation: fadeInUp 0.8s ease forwards;
-}
-
-@keyframes fadeInUp {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* ===== Placeholder Color ===== */
@@ -105,31 +80,54 @@ textarea.error::placeholder {
     .home,
     .sobre {
         flex-direction: column;
-        padding: 100px 10%;
-        gap: 40px;
+        padding: 120px 10% 60px;
+        gap: 60px;
+        text-align: center;
+    }
+
+    .home-content,
+    .sobre-content {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .home-content h1 {
+        font-size: 50px;
     }
 
     .img-box img,
     .sobre-img img {
-        width: 300px;
+        width: 320px;
+    }
+
+    .btn-box {
+        justify-content: center;
     }
 }
 
 @media (max-width: 768px) {
+    .header {
+        padding: 15px 8%;
+    }
+
     .menu-toggle {
         display: flex;
     }
 
     .navbar {
         position: fixed;
-        top: 80px;
+        top: 70px;
         right: -100%;
         width: 100%;
-        background: linear-gradient(135deg, rgba(15, 20, 25, 0.98) 0%, rgba(0, 78, 137, 0.3) 100%);
+        height: calc(100vh - 70px);
+        background: rgba(15, 20, 25, 0.95);
         flex-direction: column;
         align-items: center;
+        justify-content: center;
         padding: 40px 0;
-        transition: right 0.3s ease;
+        transition: right 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
         backdrop-filter: blur(20px);
         border-bottom: 1px solid rgba(255, 107, 53, 0.1);
     }
@@ -140,20 +138,22 @@ textarea.error::placeholder {
 
     .navbar a {
         display: block;
-        margin: 15px 0;
-        font-size: 18px;
+        margin: 20px 0;
+        font-size: 24px;
+        font-weight: 600;
     }
 
     .contact {
-        display: none;
+        display: none !important;
     }
 
     .secao h2 {
-        font-size: 42px;
+        font-size: 38px;
     }
 
     .educacao {
         grid-template-columns: 1fr;
+        padding: 0 5%;
     }
 
     .card {
@@ -161,15 +161,19 @@ textarea.error::placeholder {
     }
 
     .home-content h1 {
-        font-size: 48px;
+        font-size: 42px;
     }
 
-    .sobre-content h2 {
+    .home-content h3 {
         font-size: 36px;
     }
 
+    .sobre-content h2 {
+        font-size: 32px;
+    }
+
     .sobre-content h3 {
-        font-size: 42px;
+        font-size: 38px;
     }
 
     .contact-form form .input-box {
@@ -177,7 +181,7 @@ textarea.error::placeholder {
     }
 
     .contact-form h2 {
-        font-size: 42px;
+        font-size: 38px;
     }
 
     .home-content p,
@@ -192,19 +196,20 @@ textarea.error::placeholder {
     }
 
     .home {
-        padding: 100px 5% 30px;
+        padding: 100px 5% 40px;
     }
 
     .home-content h3 {
-        font-size: 32px;
+        font-size: 28px;
     }
 
     .home-content h1 {
-        font-size: 36px;
+        font-size: 32px;
     }
 
     .btn-box {
         flex-direction: column;
+        width: 100%;
         gap: 15px;
     }
 
@@ -214,22 +219,26 @@ textarea.error::placeholder {
     }
 
     .footer .social a {
-        width: 45px;
-        height: 45px;
-        line-height: 41px;
-        margin: 0 8px;
+        width: 40px;
+        height: 40px;
+        line-height: 36px;
+        margin: 0 5px;
+    }
+
+    .footer ul {
+        flex-direction: column;
+        gap: 15px;
     }
 
     .footer ul li {
-        padding: 0 10px;
-        font-size: 14px;
+        padding: 0;
     }
 
     .card {
-        padding: 20px;
+        padding: 25px 20px;
     }
 
     .card h3 {
-        font-size: 22px;
+        font-size: 20px;
     }
 }

@@ -1,0 +1,51 @@
+.btn-1, .btn-2, .contact {
+    display: inline-block;
+    padding: 15px 35px;
+    border-radius: 50px;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    cursor: pointer;
+    text-decoration: none;
+    text-align: center;
+}
+
+.contact {
+    padding: 12px 28px;
+    font-size: 15px;
+    background: linear-gradient(135deg, var(--primary-color), #ff8c5a);
+    color: var(--text-light);
+    border: 2px solid transparent;
+    box-shadow: 0 8px 20px rgba(255, 107, 53, 0.3);
+}
+
+.contact:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 12px 30px rgba(255, 107, 53, 0.5);
+    color: var(--text-light);
+}
+
+.btn-1 {
+    background: linear-gradient(135deg, var(--primary-color), #ff8c5a);
+    color: var(--text-light);
+    border: 2px solid transparent;
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+}
+
+.btn-1:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 35px rgba(255, 107, 53, 0.5);
+    color: var(--text-light);
+}
+
+.btn-2 {
+    background: transparent;
+    color: var(--primary-color);
+    border: 2px solid var(--primary-color);
+}
+
+.btn-2:hover {
+    background: var(--primary-color);
+    color: var(--text-light);
+    box-shadow: 0 10px 25px rgba(255, 107, 53, 0.3);
+}

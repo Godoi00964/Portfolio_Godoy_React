@@ -5,7 +5,7 @@ export default function Footer() {
   return (
     <div>
         <footer className="footer">
-      <div class="social">
+      <div className="social">
         <a href="#"><i className="bx bxl-facebook-circle"></i></a>
         <a href="https://www.linkedin.com/feed/?trk=nav_back_to_linkedin" target="_blank"><i className="bx bxl-linkedin-square"></i></a>
         <a href="https://www.instagram.com/eduardofrancodegodoi/" target="_blank"><i className="bx bxl-instagram"></i></a>
