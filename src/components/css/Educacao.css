@@ -1,5 +1,5 @@
 .secao {
-    padding: 80px 10%;
+    padding: 170px 10%;
     text-align: center;
     background: linear-gradient(135deg, #1a2634 0%, #0f3460 100%);
     position: relative;
@@ -20,7 +20,7 @@
 
 .secao h2 {
     font-size: 48px;
-    margin-bottom: 30px;
+    margin-bottom: 60px;
     font-weight: 700;
     color: var(--text-light);
     position: relative;
